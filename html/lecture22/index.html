@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      :root {
+        --primary-color: brown;
+        --custome-width: 330px;
+      }
+      .container {
+        background-color: rgb(157, 157, 37);
+        border: 1px solid black;
+        height: 650px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .box {
+        background-color: aqua;
+        border: 1px solid var(--primary-color);
+        height: 300px;
+        width: var(--custome-width);
+        margin: 5px;
+        padding: 5px;
+        /* box-shadow: -10px 15px var(--primary-color) ; */
+        /* box-shadow: 10px 15px 5px brown; */
+        /* box-shadow: 10px 15px 5px 100px brown; */
+        /* box-shadow: inset 10px 15px brown;     */
+        /* box-shadow: 10px 15px forestgreen,15px 8px red; */
+      }
+      img {
+        height: 100px;
+        width: 100px;
+      }
+      #head1 {
+        /* text-shadow: 12px 13px 1px white; */
+        /* text-shadow: yellow 12px 13px 2px ; */
+        /* text-shadow: white 12px 13px ; */
+        text-shadow: 2px 3px green,3px 4px red ;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box">
+        <img src="pic2.jpg" />
+        <h1 id="head1">Welcome to eventopia</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque id
+          eveniet maxime numquam praesentium corrupti tempora nobis error, fuga
+          alias!
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

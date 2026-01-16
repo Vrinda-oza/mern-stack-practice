@@ -1,0 +1,90 @@
+<!--
+        css position property:static(default) top,bottom,left,right can't effect,
+        
+        relative(gap is maintained)related current window adjust top,btm,lft,rgt
+        
+        absolute(remove the gap or overlap the image) related closest parent  position change top,btm,ltf,rgt,
+        
+        fixed(image fixed for the whole window),and 
+        
+        sticky(image is stuck still related container)
+
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+
+            border: 1px solid black;
+            
+        }
+        img{
+            margin: 10px;
+        }
+        .image2{
+            /* position: relative;
+            top: 100px;
+            left: 100px;   relative create a gap*/
+            /* position: absolute;/*absolute remove the gap and overlap the images
+            top: 100px; */
+        }
+        .container{
+            position: relative;
+            height: 8000px;
+            background-color: bisque;
+        }
+        .image4{
+            position: fixed;/*image is fixed for the whole window*/
+
+        }
+        .image3{
+            position: sticky;/* image is set still parent container if container 
+            is change image will be scroll */
+            top: 100px;
+        }
+        .box{
+            background-color: blueviolet;
+            height: 5000px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+            <img src="p1.png" 
+            alt="poster1"
+            width="300px"
+            height="300px"
+            class="image1"
+            />
+
+            <img src="p2.png" 
+            alt="poster2"
+            width="300px"
+            height="300px"
+            class="image2"
+            />
+
+            <img src="pic1.jpg" 
+            alt="poster3"
+            width="300px"
+            height="300px"
+            class="image3"
+            />
+
+            <img src="pic2.jpg" 
+            alt="poster4"
+            width="300px"
+            height="300px"
+            class="image4"
+            />
+    </div>
+    <div class="box">
+
+    </div>
+</body>
+</html>
