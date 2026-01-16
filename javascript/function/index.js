@@ -74,3 +74,10 @@ console.log(squarenumber(5));
     return a**b;
 }
 console.log(getexp(2,10)); */
+
+
+let twosum=function(a,b){
+    return a+b;
+
+}
+console.log(twosum(10,20));
