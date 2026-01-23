@@ -11,10 +11,11 @@
 
 //console.log(x);
 
-
+/* 
 try{
 
     console.log("try block starts here");
+    //error-> reference 
     console.log(x); //here problem or error create so it's direct jump in the catch block 
     console.log("try block finish here");
 
@@ -36,3 +37,28 @@ catch(err){
     console.log("your error is here:",err);
 
 }
+
+
+//finally block // execute everytime
+
+finally{
+    console.log("I will run everytime , as i am finally block ");
+}
+ */
+
+
+// we can create custom error using throw
+
+/* try{
+
+    console.log(x);
+}
+catch(e){
+    throw new Error("firstly declare the variable")
+    
+}
+ */
+let errorCode=100;
+    if(errorCode=100){
+    throw new Error("Invalid Json");
+    }
