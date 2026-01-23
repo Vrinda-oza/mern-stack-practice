@@ -58,7 +58,7 @@ catch(e){
     
 }
  */
-let errorCode=100;
-    if(errorCode=100){
-    throw new Error("Invalid Json");
-    }
+// let errorCode=100;
+//     if(errorCode=100){
+//     throw new Error("Invalid Json");
+//     }
