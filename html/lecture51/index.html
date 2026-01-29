@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+        <!-- Inner text -->
+    <!-- <div id="fdiv">
+        <p>
+            This is My First
+            <span>
+                Text
+            </span>
+        </p>
+        <p>
+            This is My Second Para
+        </p>
+    </div> -->
+
+
+
+
+
+
+                        <!-- Access -->
+    <!-- we are execute this file then inspect the document and write the code in console panel ex document.getelemetById("fpara");
+     when we write this we get the html that code -->
+
+     <!-- if we want to access the element by tag name  so we can also do that using document.getelementByTagName('p'); -->
+
+     <!-- if we want to access the element or tag by class so we can also do that using   -->
+
+     <!-- if we want to access this all like by a class,id,tag so we are use queryselector using document.querySelector('#fpara');,('.textmetter')  -->
+    
+    <!-- we know that we have the multiple class here with the same name but there are only first class return but if we want all the so we are use the document.queryselectorAll('p')  -->
+
+    <!-- we can also use by the $0 like firstly we select the any text or etc in the document and just write $0 that return the selected element  another method to access that using let para=$0 then just write the para now you can accessx-->
+
+    <!-- <p id="fpara" class="textmetter">First Paragraph</p>
+    
+    <p id="spara" class="textmetter">Second Paragraph</p>
+
+
+     <p id="fpara" class="textmetter">First Paragraph</p>
+    
+    <p id="spara" class="textmetter">Second Paragraph</p>
+
+    <h1 id="fheading" class="textmetter"> first heading</h1>
+
+    <button id="b1"><p>View</p></button> -->
+
+
+
+            <!-- Update existing element 
+                1.Inner HTML --get/set
+                2.Outer HTML
+                3.Text-Content
+                4. Inner text
+            -->
+<!-- 1.inner HTML:-  wtite the document in the website console then $0 write define the let button=$0 then write button it returns the html code using button.innerHTML(used for the get).  for the set we are write the button.innerHtml='<p>HELLO'</p>;-->
+
+<!-- in the inner text is show that rendering the brower content that how it show and in the text content show that how you write in the code show all the space which all are you use in the code ex. let element=document.querySelector('#fdiv');
+    print element.  and write element.innertext  -->
+    
+    
+    <!-- then write for the TextContent ex.element.textcontenet it's show the all eneter lin e which we are do in the code -->
+
+
+
+        <!-- Adding the element -->
+
+        <!-- if we want to add the heading tag in the document so we can do that using createElement ex. let fHeading = document.createElement('h1'); and print fHeading  and if we want to add the text in the heading we can also do that by ex.fHeading.textContent="My name is Vriza" and print fHeading.-->
+       
+       
+       <!-- i want to create a child of body tag. ex. letbodytag=document.querySlector('body'); print bodytag then write bodytag.appendChild(fHeading); then print bodyTag to show the result.
+         Heding print in the last after the script.
+        
+        
+        
+        
+        -->
+            <!-- <div id="fdiv">
+        <p>
+            This is My First
+            <span>
+                Text
+            </span>
+        </p>
+        <p>
+            This is My Second Para
+        </p>
+    </div> -->
+
+
+        <!-- Adding on position -->
+
+
+
+        <!-- insert AdjecentElement -->
+         <!-- position Type
+          1.beforebegin
+          2.afterbegin
+          3.beforeend
+          4.afterend
+          -->
+
+
+          <!-- ex. let mydiv=document.querySlector('#mydiv');
+           mydiv   let newElement=document.createElement('span');  print newElement  now add text newElement.textContent="This is Me Vrizaa";  print newElement  this print in span now write mydiv.insertAdjecentElement('beforebegin',newElement);-->
+          <div style=" padding:1rem; margin:1rem;background-color: yellow;">
+            Hello henehneh
+
+            <div id="mydiv" style=" padding:3rem; background-color: grey;">
+                <p id="fpara">First</p>
+                <h1>Second</h1>
+                <p>Third</p>
+            </div>
+          </div>
+
+
+
+          <!-- Removal -->
+           
+          <!-- opposite of append -->
+          
+<script src="index.js"></script>
+
+</body>
+</html>
