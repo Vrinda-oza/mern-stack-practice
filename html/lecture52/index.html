@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id="fdiv" style="background-color: blanchedalmond; padding: 2rem;">
+        first Div
+        <p id="fpara" style="background-color:blue; padding: 1rem;" class="firstclass secondclass">
+            first para
+        </p>
+    
+    <div id="sdiv" style="background-color: yellow; padding: 1.2rem;">
+        second Div
+    
+         <p id="spara" style="background-color: rgb(85, 207, 156); padding: 0.8rem;">
+        seccond para
+        </p>
+    </div>
+
+    </div>
+
+        <!--change css 
+            1].style}-get,set
+        here we can catch the  inline css only and we can't hendle multiple things about the css
+        style property only apply on the just one line and change  the only one line 
+        
+           let paraElement=document.getElementById('spara');
+            
+            paraElement -- this is shows us the element property
+             that how much element we are use in this element
+            
+             <p id=​"spara" style=​"background-color:​ pink;​ padding:​ 0.8rem;​">​ seccond para ​</p>​
+            
+            
+             console.log(paraElement.style); -- this statement shows whats the css we are apply on this element
+             
+             CSSStyleDeclaration {0: 'background-color', 1: 'padding-top', 2: 'padding-right', 3: 'padding-bottom', 4: 'padding-left',
+             accentColor: '', additiveSymbols: '', alignContent: '', alignItems: '', alignSelf: '', …}
+            
+             paraElement.style.backgroundColor='pink'; -- this line helps us to change the background color of the second para
+            'pink'
+
+            paraElement.style.color='green'; -- this line help us to change the text color.
+            'green'
+    
+    
+         so if we wantt to ssolve this problem we are use 
+            
+            2}-.cssText-- get,set we can set and style change multiple line using .cssText
+    
+                get multiple line css
+                
+                let secondelement= document.getElementById('sdiv');
+                undefined
+                
+                secondelement.style.cssText;
+                
+                'background-color: yellow; padding: 1.2rem;'
+                
+                 secondelement.style.cssText = "background-color:  black; color: white; padding: 0.5rem ";
+                
+                 'background-color:  black; color: white; padding: 0.5rem '
+    
+            3} .setAttribute()
+                    add the class and add the style etc..
+                    here we are adding the class after write this statement
+
+                    let firstelement = document.querySelector('#fdiv');
+                    undefined
+                    
+                    firstelement-- here there is not any class yet so we are add the class 
+                    by using this statement 
+                    
+                    firstelement.setAttribute('class','divClass');
+                    undefined
+                    firstelement
+                    <div id=​"fdiv" style=​"background-color:​ blanchedalmond;​ padding:​ 2rem;​" class=​"divClass">​…​</div>​
+                    
+                    so that means if we want to updaet or add the class so we can do this using this .setAttribute().
+
+
+                    if we want to change the css style so we can also do that using
+
+                    firstelement.setAttribute('style',"color: white");
+                        undefined
+                        firstelement
+                        <div id=​"fdiv" style=​"color:​ white" class=​"secondClass">​…​</div>​
+    
+                        but is we change this style so it's remove the whole complete css from the root
+
+                        so when we apply this css so it's remove the background color
+            
+            4}-- .className  add sibgle class or multiple class help to get the class set the class
+                    
+                let fpara=$0;
+                undefined
+                fpara
+                <p id=​"fpara" style=​"background-color:​blue;​ padding:​ 1rem;​" class=​"Gohan, bulbul">​ first para ​</p>​
+
+                fpara.className
+                'goku vegeta'
+                fpara.className="Gohan, bulbul";
+                'Gohan bulbul'
+                fpara
+                <p id=​"fpara" style=​"background-color:​blue;​ padding:​ 1rem;​" class=​"Gohan bulbul">​ first para ​</p>​
+                 
+            5}-- .classList  get-> array/list format
+                            add,remove,toggle,contains
+
+                    get---
+
+                    let fpara=document.querySelector('#fpara');
+                    undefined
+                    fpara
+                    <p id=​"fpara" style=​"background-color:​blue;​ padding:​ 1rem;​" class=​"firstclass secondclass">​ first para ​</p>​
+                    fpara.classList
+                    DOMTokenList(2) ['firstclass', 'secondclass', value: 'firstclass secondclass']
+
+                    .add
+
+                    fpara.classList.add('thirdclass');
+                    undefined
+                    fpara.classList
+                    DOMTokenList(3) ['firstclass', 'secondclass', 'thirdclass', value: 'firstclass secondclass thirdclass']
+                    
+                    .remove 
+
+                    fpara.classList.remove('firstclass');
+                    undefined
+                    fpara.classList
+                    DOMTokenList(2) ['secondclass', 'thirdclass', value: 'secondclass thirdclass']
+
+                    .toggle-- if class is there that means it removes the class and if not that means it will add the class
+
+                    fpara.classList.toggle('secondclass')
+                    false
+                    fpara.classList
+                    DOMTokenList ['thirdclass', value: 'thirdclass']
+
+                    .contains-- if we want to search that class is available in the list or not we can use the contaains.
+
+                    fpara.classList.contains('firstclass')
+                    false
+                    fpara.classList.contains('secondclass')
+                    true
+
+
+
+                -->
+
+
+
+</body>
+</html>
