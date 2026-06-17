@@ -1,0 +1,10 @@
+hook -->hooks in react are used to just hook on to the functionality provided by the react. 
+
+		OR
+hook is nothing it is just aa utility using which  we can hook on to the features provided by react for ex if we have a umbrella onn our hand and we hooks umbrella with the previous train so now we can use the train utility which the speed of the train that means now we can also run same as the train speed.
+
+
+
+USESTATE HOOK:--> use state means like a one user has a 1M dollar so 1M is the state of that user just like that if we have a one counter so how many time that counter click that is the state of the counter so that is called the usestate 
+
+use state provide the two things 1] state var -->store the state ,2] state function-->using function we can change or update the state. 

@@ -1,0 +1,20 @@
+props-->it's just a transfer the data from one component to another data is one kind of props
+
+
+props children--> it means if we want to access the child element so we are use the props.children
+
+
+let's take a example like we have a one card main element and it has a h1,p1,p2 other elements so when we want to access this from the app.jsx to card.jsx we first define in the app.jsx files and pass the props parameter in the card.jsx file and access that all element
+
+<card>
+//between this element that all element access as a children
+<h1>hello
+</h1>
+<p> this is mern stack course</p>
+
+</Card>
+
+so this is the passing props as children and we can also pass as a function
+
+
+

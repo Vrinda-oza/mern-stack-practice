@@ -1,0 +1,6 @@
+components-->it's just a function(just for the understanding) that gives us to just like a look like a html type code to render  
+
+we can create components in two ways   1] function based 2] class based
+
+
+

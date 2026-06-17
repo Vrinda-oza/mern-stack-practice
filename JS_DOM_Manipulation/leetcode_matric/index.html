@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LeetCode Metrics</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Syne:wght@400;600;700;800&display=swap"
+        rel="stylesheet"
+    />
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- ========== HEADER ========== -->
+        <header>
+            <div class="logo">
+                <div class="logo-icon">LC</div>
+                <h1>Leet<span>Stats</span></h1>
+            </div>
+            <p class="subtitle">// real-time leetcode metrics tracker</p>
+        </header>
+
+        <!-- ========== SEARCH BAR ========== -->
+        <div class="search-bar">
+            <input
+                type="text"
+                id="username"
+                placeholder="Enter LeetCode username..."
+                autocomplete="off"
+            />
+            <button onclick="fetchStats()">Search →</button>
+        </div>
+
+        <!-- ========== LOADER ========== -->
+        <div class="loader" id="loader">
+            <div class="spinner"></div>
+            Fetching data from LeetCode...
+        </div>
+
+        <!-- ========== ERROR BOX ========== -->
+        <div class="error-box" id="errorBox"></div>
+
+        <!-- ========== RESULTS SECTION ========== -->
+        <div class="results" id="results">
+
+            <!-- Profile Header -->
+            <div class="profile-header">
+                <img class="avatar" id="avatar" src="" alt="User Avatar" />
+                <div class="profile-info">
+                    <h2 id="realName">—</h2>
+                    <p id="usernameDisplay">@username</p>
+                </div>
+                <div class="rank-badge">
+                    Rank <strong id="rankVal">—</strong>
+                </div>
+            </div>
+
+            <!-- Difficulty Circles -->
+            <div class="circles-row">
+
+                <!-- Easy -->
+                <div class="circle-card easy">
+                    <div class="circle-wrap">
+                        <svg width="100" height="100" viewBox="0 0 100 100">
+                            <circle class="circle-bg" cx="50" cy="50" r="42" />
+                            <circle
+                                class="circle-fill"
+                                id="easyCircle"
+                                cx="50" cy="50" r="42"
+                                stroke-dasharray="264"
+                                stroke-dashoffset="264"
+                            />
+                        </svg>
+                        <div class="circle-label">
+                            <span class="solved" id="easySolved">0</span>
+                            <span class="total" id="easyTotal">/0</span>
+                        </div>
+                    </div>
+                    <span class="circle-title">Easy</span>
+                </div>
+
+                <!-- Medium -->
+                <div class="circle-card medium">
+                    <div class="circle-wrap">
+                        <svg width="100" height="100" viewBox="0 0 100 100">
+                            <circle class="circle-bg" cx="50" cy="50" r="42" />
+                            <circle
+                                class="circle-fill"
+                                id="mediumCircle"
+                                cx="50" cy="50" r="42"
+                                stroke-dasharray="264"
+                                stroke-dashoffset="264"
+                            />
+                        </svg>
+                        <div class="circle-label">
+                            <span class="solved" id="mediumSolved">0</span>
+                            <span class="total" id="mediumTotal">/0</span>
+                        </div>
+                    </div>
+                    <span class="circle-title">Medium</span>
+                </div>
+
+                <!-- Hard -->
+                <div class="circle-card hard">
+                    <div class="circle-wrap">
+                        <svg width="100" height="100" viewBox="0 0 100 100">
+                            <circle class="circle-bg" cx="50" cy="50" r="42" />
+                            <circle
+                                class="circle-fill"
+                                id="hardCircle"
+                                cx="50" cy="50" r="42"
+                                stroke-dasharray="264"
+                                stroke-dashoffset="264"
+                            />
+                        </svg>
+                        <div class="circle-label">
+                            <span class="solved" id="hardSolved">0</span>
+                            <span class="total" id="hardTotal">/0</span>
+                        </div>
+                    </div>
+                    <span class="circle-title">Hard</span>
+                </div>
+
+            </div>
+
+            <!-- Solved Distribution Bar -->
+            <div class="accept-row">
+                <div class="stat-label">Solved distribution</div>
+                <div class="accept-segments">
+                    <div class="seg" id="easyBar"   style="background: var(--easy);   width: 0%"></div>
+                    <div class="seg" id="mediumBar" style="background: var(--medium); width: 0%"></div>
+                    <div class="seg" id="hardBar"   style="background: var(--hard);   width: 0%"></div>
+                </div>
+                <div class="accept-legend">
+                    <span><span class="dot" style="background: var(--easy)"></span>Easy</span>
+                    <span><span class="dot" style="background: var(--medium)"></span>Medium</span>
+                    <span><span class="dot" style="background: var(--hard)"></span>Hard</span>
+                </div>
+            </div>
+
+            <!-- Submission Stats Cards -->
+            <div class="stats-grid">
+
+                <div class="stat-card overall">
+                    <div class="stat-label">
+                        <span class="dot" style="background: var(--accent)"></span>
+                        Overall Submissions
+                    </div>
+                    <div class="stat-value" id="totalSubmissions">—</div>
+                    <div class="stat-sub" id="totalAC">— accepted</div>
+                    <div class="mini-bar-bg">
+                        <div class="mini-bar-fill" id="totalBar" style="background: var(--accent); width: 0%"></div>
+                    </div>
+                </div>
+
+                <div class="stat-card easy-s">
+                    <div class="stat-label">
+                        <span class="dot" style="background: var(--easy)"></span>
+                        Easy Submissions
+                    </div>
+                    <div class="stat-value" id="easySubmissions">—</div>
+                    <div class="stat-sub" id="easyAC">— accepted</div>
+                    <div class="mini-bar-bg">
+                        <div class="mini-bar-fill" id="easySubBar" style="background: var(--easy); width: 0%"></div>
+                    </div>
+                </div>
+
+                <div class="stat-card medium-s">
+                    <div class="stat-label">
+                        <span class="dot" style="background: var(--medium)"></span>
+                        Medium Submissions
+                    </div>
+                    <div class="stat-value" id="mediumSubmissions">—</div>
+                    <div class="stat-sub" id="mediumAC">— accepted</div>
+                    <div class="mini-bar-bg">
+                        <div class="mini-bar-fill" id="mediumSubBar" style="background: var(--medium); width: 0%"></div>
+                    </div>
+                </div>
+
+                <div class="stat-card hard-s">
+                    <div class="stat-label">
+                        <span class="dot" style="background: var(--hard)"></span>
+                        Hard Submissions
+                    </div>
+                    <div class="stat-value" id="hardSubmissions">—</div>
+                    <div class="stat-sub" id="hardAC">— accepted</div>
+                    <div class="mini-bar-bg">
+                        <div class="mini-bar-fill" id="hardSubBar" style="background: var(--hard); width: 0%"></div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <!-- end .results -->
+
+    </div>
+    <!-- end .container -->
+
+    <script src="script.js"></script>
+
+</body>
+</html>
