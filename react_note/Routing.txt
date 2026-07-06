@@ -1,0 +1,10 @@
+route --> move to one page to another page is called the route. ex. www.codehelp.in/about
+
+
+parameter--> useParams  parameter is like www.codehelp.in/student/abcd........ so how to handle like this id is called the rout  parameter or url parameter.
+
+and www.codehelp.in/id=..... is called the query parameter.
+
+use navigation hook--> using use navigate hook we can move  between to pages. 
+
+nested routing.

@@ -1,0 +1,8 @@
+UseEffect --> useeffect is a react hook which is generate the side-effect 
+
+for example 
+when the DOMcontent(event) will be loaded then create the connection with the DB(side effect create on the event ).
+
+whenever we render our project and any API will be fatch that is called the side effect.
+
+DB connection logic, fetch API logic, and like whenever click on any button and it will generate the alert/Dialogue box appear so this all work done by the react hook.

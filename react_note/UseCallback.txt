@@ -1,0 +1,10 @@
+UseCallback --> function renfrence ko cache karta hain/memoisse /freeze karta hain.
+
+unnecessary child component ko re render hone se bachane ke liye react.memo ka ya to phir react.usecallback ka use kia jata hain. 
+
+ajb bhi only value ke saath deal kar rahe hain to usememo ka use hota hain and agar function ke sath work karte hain to usecallback ka use hota hain.
+
+
+handling expensive operation .function ko create karne se bachata hain .
+
+usecallback me function ke refrence ko memoisation karte hain.re create karne se bachata hain. but re run se nahi bacha sakte vo re run hoga hi hoga. agar rokna chahe ho usememo ka use kar sakte hain.

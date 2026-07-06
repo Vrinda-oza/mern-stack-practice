@@ -1,0 +1,15 @@
+UseMemo-->Memo is a Memoisation
+
+so memoisation means agar koi nayi problem aayi hain to use solve karega and usko kahi store kar dega.and agar Pehle se hi solve ki huyi hain to Pehle se use solve karne ki koi need nahi hain.
+
+
+UseMemohook -->kabhi kabhi application me kai sari expensive operation ,task,calculation hoti hain and use unnecessary perform karte hain.
+
+expensive ka mtlb hain ki koi aisa task jo bahut time leta ho , memory jyada consume karta ho,jo resources jyada consume karta ho.to ye saare task ko expensive kehte hain. 
+
+to kabhi kabhi humne aiss code likha hota hain ki bar bar un expensive  code ko use kar rahe hain joki uski jarurt bhi nahi hain. so aise unnecessary expensive operation ko prevent karne ka jo kam hota hain use UseMemohook kehte hain.
+
+for ex 2*3=6 aaya to use solve kia and use store kar dia ab jab doobar vo calculation aayi to direct us answer ko de diya.
+
+
+clickbtn->setcount(+1)->count update->component->re render->expensiveTask()call->for loop execute 100000000 times and this whole code execute all the time and this loop will take the time so that's why o/p will be delay.

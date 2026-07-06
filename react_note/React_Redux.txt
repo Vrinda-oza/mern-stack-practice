@@ -1,0 +1,13 @@
+action-->it's just a event and we are wraping the event or we are wrapping the additional information with the event.[event+additional info(payload(object,data))].
+
+
+
+slice--> har feature ki state ko maintain karneka logic slice me rakha hota hain. har application me feture hote hain jaise ki authentication login karna like that type.initial state likhi jati hain jaise count ki 0 likhi jati hain waise. reducer function bhi idhar likhe hote hain.  agar count karna chahte ho to uska slice create kar dia agar  authentication ka chahte hain to uska slice create kar dia.s so aisa koi bhi feture hain jisme state management ki need hain so us particular feture ke liye slice create kar sakte hain.
+
+
+rudeucer--> it's just a function jiska use karke hum data ko update,change kar sakte hain as per are ligic.
+
+
+store --> it's a single source of truth hota hain jis me state padi hoti hain isme sara data pada hota hain.
+
+state-->it's just a fancy name of data.

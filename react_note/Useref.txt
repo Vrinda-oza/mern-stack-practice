@@ -1,0 +1,9 @@
+UseRef hook  -->it's have two scenario.
+
+using useref agar humne koi var create kia hain vo variable to wo apne data ko apne state ko,apne value ko persist karta hain .across re render.kitne bhi re render hum karvale uski value loose nahi hone vali ye apni value ko persist rakhega useref.humesha value ko save rakhega.
+
+2]agar dom ke andar kisi bhi element ko directly access karna chahte hain apne according manipulate karna chahte hain,change karna chahte hain to wo hum kar sakte hain.uske liye 3 step hote hain.
+
+1] ref ko crate karte hain
+2] use ref ko link karte hain us particular element ke sath.
+3]  use ref ki .current field ko access karke jo bhi humko property change karni ho like bg change karna chahe ,style change karna chahe etc. to wo dom ko manipulate kar sakte hain. jo hum get element by id ,class karte the wo hume nahi karna padta isse hum direct access kar sakte hain

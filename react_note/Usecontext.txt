@@ -1,0 +1,6 @@
+Prop drilling is a drawback for passing the data for  example one parent are there and 3 child are there  so parent want  to pass the data to last child 3 so parent send to first child ,second child and then in the last data reach to the third child so this is called the prop drilling like a drilling do the digging in the road.
+
+so the solution of the prop drilling is Use context.  in the use context three step are there 1] create context
+2] provide
+3] consume
+ so now the parent will be the context provide and the third child will become the context-consumer. so direct data will pass from parent to the child3 no other child will receive that data unnecessarily. so it will reduce the prop drilling. 
